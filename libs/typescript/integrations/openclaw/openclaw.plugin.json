@@ -1,0 +1,30 @@
+{
+  "id": "MLForge-openclaw",
+  "name": "MLForge Tracing",
+  "description": "Export OpenClaw LLM traces to MLForge",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "trackingUri": { "type": "string" },
+      "experimentId": { "type": "string" }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Tracing Enabled",
+      "help": "Enable MLForge trace export while the plugin is loaded."
+    },
+    "trackingUri": {
+      "label": "MLForge Tracking URI",
+      "placeholder": "http://localhost:5000",
+      "help": "Defaults to MLForge_TRACKING_URI when not set."
+    },
+    "experimentId": {
+      "label": "Experiment ID",
+      "placeholder": "0",
+      "help": "Defaults to MLForge_EXPERIMENT_ID when not set."
+    }
+  }
+}

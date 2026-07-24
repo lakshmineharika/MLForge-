@@ -1,0 +1,11 @@
+[project]
+name = "clint"
+version = "0.1.0"
+description = "A custom linter for MLForge to enforce rules that ruff doesn't cover."
+readme = "README.md"
+authors = [{ name = "MLForge", email = "MLForge@MLForge.com" }]
+dependencies = ["tomli", "typing_extensions"]
+
+
+[project.scripts]
+clint = "clint:main"

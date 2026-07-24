@@ -1,0 +1,75 @@
+{
+  "name": "@MLForge/claude-code",
+  "version": "0.3.0",
+  "description": "Claude Code and Claude Agent SDK integration package for MLForge Tracing",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLForge/MLForge.git"
+  },
+  "homepage": "https://MLForge.org/",
+  "author": {
+    "name": "MLForge",
+    "url": "https://MLForge.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/MLForge/MLForge/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "MLForge",
+    "tracing",
+    "observability",
+    "claude-code",
+    "claude",
+    "claude-agent-sdk",
+    "anthropic",
+    "llm",
+    "agent",
+    "javascript",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "MLForge-claude-code": "./bundle/cli.cjs"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:bundle",
+    "build:bundle": "node esbuild.config.mjs",
+    "test": "jest --config jest.config.cjs",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@MLForge/core": "^0.3.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/claude-agent-sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.0",
+    "@types/jest": "^29.5.3",
+    "esbuild": "^0.25.0",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "bundle/",
+    "hooks/",
+    "skills/",
+    ".claude-plugin/"
+  ]
+}

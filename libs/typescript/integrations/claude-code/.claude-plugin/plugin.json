@@ -1,0 +1,13 @@
+{
+  "name": "MLForge-tracing",
+  "version": "0.2.0",
+  "description": "Observability plugin for Claude Code with MLForge tracing",
+  "author": {
+    "name": "MLForge",
+    "url": "https://MLForge.org/"
+  },
+  "homepage": "https://MLForge.org/",
+  "license": "Apache-2.0",
+  "keywords": ["MLForge", "tracing", "observability", "llm"],
+  "skills": "./skills/"
+}

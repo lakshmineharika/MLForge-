@@ -1,0 +1,17 @@
+## MLForge Dev Scripts
+
+This directory contains automation scripts for MLForge developers and the build infrastructure.
+
+## Job Statuses
+
+[![Examples Action Status](https://img.shields.io/github/actions/workflow/status/MLForge/dev/examples.yml.svg?branch=master&event=schedule&label=Examples&style=for-the-badge&logo=github)](https://github.com/MLForge/dev/actions/workflows/examples.yml?query=workflow%3AExamples+event%3Aschedule)
+[![Cross Version Tests Status](https://img.shields.io/github/actions/workflow/status/MLForge/dev/cross-version-tests.yml.svg?branch=master&event=schedule&label=Cross%20version%20tests&style=for-the-badge&logo=github)](https://github.com/MLForge/dev/actions/workflows/cross-version-tests.yml?query=workflow%3A%22Cross+version+tests%22+event%3Aschedule)
+[![Cross Version Test Visualization](https://img.shields.io/github/actions/workflow/status/MLForge/dev/xtest-viz.yml.svg?branch=master&event=schedule&label=Test%20Results%20Viz&style=for-the-badge&logo=github)](https://github.com/MLForge/dev/actions/workflows/xtest-viz.yml)
+[![R-devel Action Status](https://img.shields.io/github/actions/workflow/status/MLForge/dev/r.yml.svg?branch=master&event=schedule&label=r-devel&style=for-the-badge&logo=github)](https://github.com/MLForge/dev/actions/workflows/r.yml?query=workflow%3AR+event%3Aschedule)
+[![Test Requirements Status](https://img.shields.io/github/actions/workflow/status/MLForge/dev/test-requirements.yml.svg?branch=master&event=schedule&label=test%20requirements&logo=github&style=for-the-badge)](https://github.com/MLForge/dev/actions/workflows/test-requirements.yml?query=workflow%3A%22Test+requirements%22+event%3Aschedule)
+[![Push Images Status](https://img.shields.io/github/actions/workflow/status/MLForge/MLForge/push-images.yml.svg?event=release&label=push-images&logo=github&style=for-the-badge)](https://github.com/MLForge/MLForge/actions/workflows/push-images.yml?query=event%3Arelease)
+[![Slow Tests Status](https://img.shields.io/github/actions/workflow/status/MLForge/dev/slow-tests.yml.svg?branch=master&event=schedule&label=slow-tests&logo=github&style=for-the-badge)](https://github.com/MLForge/dev/actions/workflows/slow-tests.yml?query=event%3Aschedule)
+[![Website E2E Tests Status](https://img.shields.io/github/actions/workflow/status/MLForge/MLForge-website/e2e.yml.svg?branch=main&event=schedule&label=website-e2e&logo=github&style=for-the-badge)](https://github.com/MLForge/MLForge-website/actions/workflows/e2e.yml?query=event%3Aschedule)
+[![Update Model Catalog Status](https://img.shields.io/github/actions/workflow/status/MLForge/MLForge/update-model-catalog.yml.svg?branch=master&event=schedule&label=update-model-catalog&logo=github&style=for-the-badge)](https://github.com/MLForge/MLForge/actions/workflows/update-model-catalog.yml?query=event%3Aschedule)
+[![Gateway Benchmark Status](https://img.shields.io/github/actions/workflow/status/MLForge/MLForge/gateway-benchmark.yml.svg?branch=master&event=schedule&label=gateway-benchmark&logo=github&style=for-the-badge)](https://github.com/MLForge/MLForge/actions/workflows/gateway-benchmark.yml?query=event%3Aschedule)
+[![Tracing Benchmark Status](https://img.shields.io/github/actions/workflow/status/MLForge/MLForge/tracing-benchmark.yml.svg?branch=master&label=tracing-benchmark&logo=github&style=for-the-badge)](https://github.com/MLForge/MLForge/actions/workflows/tracing-benchmark.yml)

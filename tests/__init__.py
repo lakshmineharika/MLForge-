@@ -1,0 +1,3 @@
+from MLForge.utils.logging_utils import _configure_MLForge_loggers
+
+_configure_MLForge_loggers(root_module_name=__name__)

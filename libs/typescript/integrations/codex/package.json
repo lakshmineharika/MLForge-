@@ -1,0 +1,59 @@
+{
+  "name": "@MLForge/codex",
+  "version": "0.3.0",
+  "description": "Codex CLI integration package for MLForge Tracing",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLForge/MLForge.git"
+  },
+  "homepage": "https://MLForge.org/",
+  "author": {
+    "name": "MLForge",
+    "url": "https://MLForge.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/MLForge/MLForge/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "MLForge",
+    "tracing",
+    "observability",
+    "codex",
+    "openai",
+    "llm",
+    "agent",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "bundle"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "MLForge-codex": "./bundle/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:bundle",
+    "build:bundle": "node esbuild.config.mjs",
+    "prepublishOnly": "npm run build",
+    "test": "jest --config jest.config.cjs",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@MLForge/core": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "esbuild": "^0.25.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.3"
+  }
+}

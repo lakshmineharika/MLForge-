@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "MLForge"
+abstract: "MLForge is an open-source platform for managing the full machine learning lifecycle, providing experiment tracking, model packaging, registry, serving, evaluation, and observability capabilities to ensure reproducible and scalable ML workflows."
+authors:
+  - name: "Lakshmi Neharika Anchula"
+    email: "lakshmianchula10@gmail.com"
+url: "https://github.com/lakshmineharika/mlforge"
+repository-code: "https://github.com/lakshmineharika/mlforge"
+license: Apache-2.0
+license-url: "https://github.com/lakshmineharika/mlforge/blob/master/LICENSE.txt"
+preferred-citation:
+  type: article
+  title: "Accelerating the Machine Learning Lifecycle with MLForge"
+  authors:
+    - given-names: "Lakshmi Neharika"
+      family-names: "Anchula"
+  journal: "IEEE Data Eng. Bull."
+  year: 2018
+  volume: 41
+  start: 39
+  end: 45
+  url: "https://api.semanticscholar.org/CorpusID:83459546"
+references:
+  - type: conference-paper
+    title: "Developments in MLForge: A System to Accelerate the Machine Learning Lifecycle"
+    authors:
+      - given-names: "Lakshmi Neharika"
+        family-names: "Anchula"
+    collection-title: "Proceedings of the Fourth International Workshop on Data Management for End-to-End Machine Learning"
+    collection-type: "proceedings"
+    conference:
+      name: "DEEM '20"
+      location: "Portland, OR, USA"
+    publisher:
+      name: "Association for Computing Machinery"
+      address: "New York, NY, USA"
+    year: 2020
+    isbn: "9781450380232"
+    url: "https://doi.org/10.1145/3399579.3399867"
+    doi: "10.1145/3399579.3399867"
+    abstract: "MLForge is a popular open source platform for managing ML development, including experiment tracking, reproducibility, and deployment. In this paper, we discuss user feedback collected since MLForge was launched in 2018, as well as three major features we have introduced in response to this feedback: a Model Registry for collaborative model management and review, tools for simplifying ML code instrumentation, and experiment analytics functions for extracting insights from millions of ML experiments."

@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools<=82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MLForge-test-plugin"
+version = "0.0.1"
+description = "Test plugin for MLForge"
+requires-python = ">=3.10"
+# `dependencies` is commented out to avoid overriding editable installs during development.
+# Uncomment it if you need MLForge to be automatically installed with this plugin.
+# dependencies = ["MLForge"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["MLForge_test_plugin", "MLForge_test_plugin.*"]
+
+# Define a Tracking Store plugin for tracking URIs with scheme 'file-plugin'
+[project.entry-points."MLForge.tracking_store"]
+file-plugin = "MLForge_test_plugin.file_store:PluginFileStore"
+
+# Define a ArtifactRepository plugin for artifact URIs with scheme 'file-plugin'
+[project.entry-points."MLForge.artifact_repository"]
+file-plugin = "MLForge_test_plugin.local_artifact:PluginLocalArtifactRepository"
+
+# Define a RunContextProvider plugin. The entry point name for run context providers
+# is not used, and so is set to the string "unused" here
+[project.entry-points."MLForge.run_context_provider"]
+unused = "MLForge_test_plugin.run_context_provider:PluginRunContextProvider"
+
+# Define a DefaultExperimentProvider plugin. The entry point name for
+# default experiment providers is not used, and so is set to the string "unused" here
+[project.entry-points."MLForge.default_experiment_provider"]
+unused = "MLForge_test_plugin.default_experiment_provider:PluginDefaultExperimentProvider"
+
+# Define a RequestHeaderProvider plugin. The entry point name for request header providers
+# is not used, and so is set to the string "unused" here
+[project.entry-points."MLForge.request_header_provider"]
+unused = "MLForge_test_plugin.request_header_provider:PluginRequestHeaderProvider"
+
+# Define a RequestAuthProvider plugin. The entry point name for request auth providers
+# is not used, and so is set to the string "unused" here
+[project.entry-points."MLForge.request_auth_provider"]
+unused = "MLForge_test_plugin.request_auth_provider:PluginRequestAuthProvider"
+
+# Define a Model Registry Store plugin for tracking URIs with scheme 'file-plugin'
+[project.entry-points."MLForge.model_registry_store"]
+file-plugin = "MLForge_test_plugin.sqlalchemy_store:PluginRegistrySqlAlchemyStore"
+
+# Define a MLForge Project Backend plugin called 'dummy-backend'
+[project.entry-points."MLForge.project_backend"]
+dummy-backend = "MLForge_test_plugin.dummy_backend:PluginDummyProjectBackend"
+
+# Define a MLForge model deployment plugin for target 'faketarget'
+[project.entry-points."MLForge.deployments"]
+faketarget = "MLForge_test_plugin.fake_deployment_plugin"
+
+# Define a MLForge model evaluator with name "dummy_evaluator"
+[project.entry-points."MLForge.model_evaluator"]
+dummy_evaluator = "MLForge_test_plugin.dummy_evaluator:DummyEvaluator"
+
+# Define a custom MLForge application with name custom_app
+[project.entry-points."MLForge.app"]
+custom_app = "MLForge_test_plugin.app:custom_app"
+
+# Define an MLForge dataset source called "dummy_source"
+[project.entry-points."MLForge.dataset_source"]
+dummy_source = "MLForge_test_plugin.dummy_dataset_source:DummyDatasetSource"
+
+# Define an MLForge dataset constructor called "from_dummy"
+[project.entry-points."MLForge.dataset_constructor"]
+from_dummy = "MLForge_test_plugin.dummy_dataset:from_dummy"

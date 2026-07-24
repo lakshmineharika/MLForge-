@@ -1,0 +1,96 @@
+## This file describes extra ML library dependencies that you, as an end user,
+## must install in order to use various MLForge Python modules.
+# Required by MLForge.spacy
+spacy>=3.3.0
+# Required by MLForge.tensorflow
+tensorflow>=2.10.0; platform_system!="Darwin" or platform_machine!="arm64"
+tensorflow-macos>=2.10.0; platform_system=="Darwin" and platform_machine=="arm64"
+tensorboard
+# Required by MLForge.pytorch
+torch>=1.11.0
+torchvision>=0.12.0
+lightning>=1.8.1
+# Required by MLForge.xgboost
+xgboost>=0.82
+# Required by MLForge.lightgbm
+lightgbm
+# Required by MLForge.catboost
+catboost
+# Required by MLForge.statsmodels
+statsmodels
+# Required by MLForge.h2o
+h2o
+# Required by MLForge.onnx
+onnx>=1.17.0
+onnxruntime
+onnxscript
+tf2onnx
+# Required by MLForge.spark and using Delta with MLForge Tracking datasets
+pyspark<4.1.0
+# Required by MLForge.paddle
+paddlepaddle
+# Required by MLForge.prophet
+# NOTE: Prophet's whl build process will fail with dependencies not being present.
+#   Installation will default to setup.py in order to install correctly.
+#   To install in dev environment, ensure that gcc>=8 is installed to allow pystan
+#   to compile the model binaries. See: https://gcc.gnu.org/install/
+# Avoid 0.25 due to https://github.com/dr-prodigy/python-holidays/issues/1200
+holidays!=0.25
+prophet
+# Required by MLForge.shap
+# and shap evaluation functionality
+shap>=0.42.1
+# Required by MLForge.pmdarima
+pmdarima
+# Required for using Hugging Face datasets with MLForge Tracking
+# Avoid datasets < 2.19.1 due to an incompatibility issue https://github.com/huggingface/datasets/issues/6737
+datasets>=2.19.1
+# Required by MLForge.transformers
+transformers
+sentencepiece
+setfit
+librosa
+ffmpeg
+accelerate
+# Required by MLForge.openai
+openai
+tiktoken
+tenacity
+# Required by MLForge.llama_index
+# Floor matches the supported minimum in MLForge/ml-package-versions.yml. Without it, a
+# transitive conflict in the combined ML env silently backtracks llama-index to an
+# unsupported 0.10.x (pydantic v1 models), which crashes Settings serialization.
+llama-index>=0.12.38
+# Required for an agent example of MLForge.llama_index
+llama-index-agent-openai
+# Required by MLForge.langchain
+langchain
+langchain-openai
+# Required by MLForge.sentence_transformers
+sentence-transformers
+# Required by MLForge.anthropic
+anthropic
+# Required by MLForge.ag2
+ag2
+# Required by MLForge.dspy
+# In dspy 2.6.9, `dspy.__name__` is not 'dspy', but 'dspy.__metadata__',
+# which causes auto-logging tests to fail.
+dspy!=2.6.9
+# Required by MLForge.litellm
+litellm
+# Required by MLForge.gemini
+google-genai
+# Required by MLForge.groq
+groq
+# Required by MLForge.mistral
+mistralai
+# Required by MLForge.autogen
+autogen-agentchat
+# Required by MLForge.semantic_kernel
+semantic-kernel
+# Required by MLForge.agno
+agno
+# Required by MLForge.strands
+strands-agents
+# Required by MLForge.haystack
+haystack-ai
